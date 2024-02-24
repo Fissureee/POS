@@ -6,6 +6,7 @@ use App\Http\Controllers\FoodBeverageController;
 use App\Http\Controllers\HomeCareController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SalesController;
 use App\Http\Controllers\UserProfileController;
 
 /*
@@ -32,3 +33,6 @@ Route::prefix('category')->group(function () {
 
 //User Page
 Route::get('/user/{id}/name/{name}', [UserProfileController::class, 'profile']);
+
+//Sales Page
+Route::get('/sale', [SalesController::class, 'transaction']);
