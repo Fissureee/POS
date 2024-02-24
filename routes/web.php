@@ -6,6 +6,7 @@ use App\Http\Controllers\FoodBeverageController;
 use App\Http\Controllers\HomeCareController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,5 @@ Route::prefix('category')->group(function () {
     Route::get('/baby-kid', [BabyKidController::class, 'index']);
 });
 
+//User Page
+Route::get('/user/{id}/name/{name}', [UserProfileController::class, 'profile']);
